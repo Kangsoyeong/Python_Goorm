@@ -1,4 +1,4 @@
-sentence = "Contrary to popular belief, Lorem Ipsum is not simply random text."
+sentence = "Contrary to popular belief, Lorem Ipsum is not simply random  text."
 
 num1 = sentence.count('t')
 print(num1)
