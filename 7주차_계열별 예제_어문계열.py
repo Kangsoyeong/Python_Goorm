@@ -6,3 +6,17 @@ plot = """\'플롯(plot)\'이란 어떤 일련의 사건들을 예술적으로 �
 1. Protagonist: 여러 등장인물 또는 성격 중 가장 주요한 성격으로, 단순하게 표현하면 \'주인공\'입니다.
 2. Antagonist: Protagonist에 대항하는 상대 성격입니다.
 3. Hero: Protagonist를 의미하는 경우가 많지만 종종 \'용기\', \'영광\', \'숭고함\' 등을 표현합니다."""
+
+finder = True
+
+while finder:
+    keyword = input('존재하는지 알고 싶은 키워드를 검색하세요(검색을 끝내고 싶다면 out을 입력하세요): ')
+
+    if keyword == 'out':
+        finder = False
+    elif plot.find(keyword) == -1:
+        add_content = input('해당 키워드에 대한 설명을 추가 작성해주세요: ')
+        plot = plot + '\n' + add_content
+        print(plot)
+    else:
+        print('%s는 앞에서부터 %d번째 위치에 있습니다.' % (keyword, plot.find(keyword) + 1))
